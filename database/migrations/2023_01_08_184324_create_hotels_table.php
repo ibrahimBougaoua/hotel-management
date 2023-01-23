@@ -21,7 +21,7 @@ return new class extends Migration
             $table->integer("TelH");
             $table->timestamps();
            
-            $table->unsignedInteger("classes_Nbreetoile");
+            $table->integer("classes_Nbreetoile");
             $table->foreign('classes_Nbreetoile')->references('Nbreetoile')->on('classes');
         });
     }

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->date("DateFin");
             $table->date("DatePayeArrhes");
             $table->integer("MontantArrhes");
-            $table->unsignedInteger("chambre_Nchambre");
+            $table->Integer("chambre_Nchambre");
             $table->unsignedInteger("clients_Codeclient");
            
 

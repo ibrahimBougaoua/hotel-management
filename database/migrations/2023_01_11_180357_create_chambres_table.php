@@ -20,7 +20,7 @@ return new class extends Migration
             $table->unsignedInteger("hotel_Nhotel");
 
             $table->foreign('categorie_CodeCategorie')->references('CodeCategorie')->on('categories');
-            $table->foreign('hotel_Nhotel')->references('hotels')->on('Nhotel');
+            $table->foreign('hotel_Nhotel')->references('Nhotel')->on('hotels');
             $table->primary('Nchambre');
             $table->timestamps();
         });

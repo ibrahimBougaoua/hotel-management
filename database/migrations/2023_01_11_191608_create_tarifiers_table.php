@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('tarifiers', function (Blueprint $table) {
             $table->integer("TarifUnitaire");
             $table->unsignedInteger("categorie_CodeCategorie");
-            $table->unsignedInteger("classes_Nbreetoile");
+            $table->integer("classes_Nbreetoile");
             
             $table->foreign('classes_Nbreetoile')->references('Nbreetoile')->on('classes');
             $table->foreign('categorie_CodeCategorie')->references('CodeCategorie')->on('categories');
