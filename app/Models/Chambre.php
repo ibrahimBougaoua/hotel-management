@@ -24,4 +24,9 @@ class Chambre extends Model
         return $this->belongsTo(Categories::class,"categorie_CodeCategorie","CodeCategorie");
 
     }
+
+    public function hotel(){
+        return $this->belongsTo(hotel::class,"hotel_Nhotel","Nhotel");
+
+    }
 }
