@@ -16,5 +16,16 @@ class Reservation extends Model
         'MontantArrhes',
         'chambre_Nchambre',
         'clients_Codeclient',
+        
     ];
+
+    public function client()
+{
+    return $this->belongsTo(clients::class,"clients_Codeclient","Codeclient");
+}
+
+public function chambre()
+{
+    return $this->belongsTo(Chambre::class,"chambre_Nchambre","Nchambre");
+}
 }

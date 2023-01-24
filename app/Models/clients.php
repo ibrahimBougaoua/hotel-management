@@ -21,4 +21,13 @@ class clients extends Model
         'Email',
   
     ];
+    public function reservations()
+    {
+        return $this->hasMany(Reservation::class,"clients_Codeclient","Codeclient");
+    }
+
+    public function consommations()
+    {
+        return $this->hasMany(Consommation::class,"clients_Codeclient","Codeclient");
+    }
 }

@@ -15,4 +15,13 @@ class Chambre extends Model
         'hotel_Nhotel',
  
     ];
+
+    public function reservation(){
+        return $this->hasMany(Reservation::class,"chambre_Nchambre","Nchambre");
+
+    }
+    public function categorie(){
+        return $this->belongsTo(Categories::class,"categorie_CodeCategorie","CodeCategorie");
+
+    }
 }

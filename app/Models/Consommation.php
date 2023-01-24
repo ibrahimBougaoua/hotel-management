@@ -12,4 +12,9 @@ class Consommation extends Model
         'Nconsommation',
         'clients_Codeclient',
     ];
+
+    public function client()
+    {
+        return $this->belongsTo(clients::class,"clients_Codeclient","Codeclient");
+    }
 }

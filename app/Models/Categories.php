@@ -14,4 +14,9 @@ class Categories extends Model
         'Description',
        
     ];
+
+    public function chambres()
+    {
+        return $this->hasMany(Chambre::class,"categorie_CodeCategorie","CodeCategorie");
+    }
 }
