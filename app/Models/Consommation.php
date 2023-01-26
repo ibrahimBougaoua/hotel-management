@@ -17,4 +17,9 @@ class Consommation extends Model
     {
         return $this->belongsTo(clients::class,"clients_Codeclient","Codeclient");
     }
+
+    public function prestations()
+    {
+        return $this->belongsToMany(Prestations::class,"concerner","consomations_id","prestations_id");
+    }
 }

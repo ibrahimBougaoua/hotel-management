@@ -15,4 +15,9 @@ class Prestations extends Model
        
     ];
 
+    public function consommations()
+    {
+        return $this->belongsToMany(Consommation::class,"concerner","prestations_id","consomations_id");
+    }
+
 }
